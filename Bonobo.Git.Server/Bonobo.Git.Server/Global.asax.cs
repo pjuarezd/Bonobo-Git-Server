@@ -109,7 +109,7 @@ namespace Bonobo.Git.Server
         {
             var container = new UnityContainer();
 
-            container.RegisterType<IMembershipService, EFMembershipService>();
+            container.RegisterType<IMembershipService, ADMemershipService>();
             container.RegisterType<IRepositoryPermissionService, EFRepositoryPermissionService>();
             container.RegisterType<IFormsAuthenticationService, FormsAuthenticationService>();
             container.RegisterType<ITeamRepository, EFTeamRepository>();
