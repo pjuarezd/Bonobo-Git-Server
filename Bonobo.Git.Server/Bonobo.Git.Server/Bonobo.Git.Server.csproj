@@ -21,6 +21,10 @@
     </FileUpgradeFlags>
     <OldToolsVersion>4.0</OldToolsVersion>
     <UpgradeBackupLocation />
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <DebugSymbols>true</DebugSymbols>
@@ -79,14 +83,16 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="System.Data.Entity" />
-    <Reference Include="System.Data.SQLite">
+    <Reference Include="System.Data.SQLite, Version=1.0.66.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=x86">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\Libraries\System.Data.SQLite.DLL</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="System.Data.SQLite.Linq">
       <HintPath>..\Libraries\System.Data.SQLite.Linq.dll</HintPath>
       <Private>True</Private>
     </Reference>
+    <Reference Include="System.DirectoryServices" />
+    <Reference Include="System.DirectoryServices.AccountManagement" />
     <Reference Include="System.Drawing" />
     <Reference Include="System.ComponentModel.DataAnnotations">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -139,6 +145,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Application\ActiveDirectoryHelpers.cs" />
     <Compile Include="App_GlobalResources\Resources.ja-JP.designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -182,6 +189,7 @@
     </Compile>
     <Compile Include="FormsAuthorizeRepositoryAttribute.cs" />
     <Compile Include="RepositoryBrowser.cs" />
+    <Compile Include="Security\ADMemershipService.cs" />
     <Compile Include="Security\EFMembershipService.cs" />
     <Compile Include="Security\EFRepositoryPermissionService.cs" />
     <Compile Include="Controllers\GitController.cs" />

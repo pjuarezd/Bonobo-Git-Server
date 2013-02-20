@@ -1555,6 +1555,15 @@ namespace Bonobo.Git.Server.App_GlobalResources {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to LDAP Path.
+        /// </summary>
+        public static string Settings_LDAP_Path {
+            get {
+                return ResourceManager.GetString("Settings_LDAP_Path", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Selected path does not exist. Please create the folder or choose different path..
         /// </summary>
         public static string Settings_RepositoryPathNotExists {

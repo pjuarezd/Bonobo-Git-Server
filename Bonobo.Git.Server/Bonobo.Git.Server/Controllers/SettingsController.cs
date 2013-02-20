@@ -22,6 +22,7 @@ namespace Bonobo.Git.Server.Controllers
                 RepositoryPath = UserConfigurationManager.Repositories,
                 AllowAnonymousRegistration = UserConfigurationManager.AllowAnonymousRegistration,
                 AllowUserRepositoryCreation = UserConfigurationManager.AllowUserRepositoryCreation,
+                LDAPPath = UserConfigurationManager.LDAPPath
             });
         }
 
@@ -41,6 +42,7 @@ namespace Bonobo.Git.Server.Controllers
                         UserConfigurationManager.Repositories = model.RepositoryPath;
                         UserConfigurationManager.AllowAnonymousRegistration = model.AllowAnonymousRegistration;
                         UserConfigurationManager.AllowUserRepositoryCreation = model.AllowUserRepositoryCreation;
+                        UserConfigurationManager.LDAPPath = model.LDAPPath;
                         UserConfigurationManager.Save();
 
                         ViewBag.UpdateSuccess = true;

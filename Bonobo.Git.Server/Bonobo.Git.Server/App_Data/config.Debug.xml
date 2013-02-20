@@ -1,7 +1,8 @@
 <?xml version="1.0"?>
-<Configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+<Configuration xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <AllowAnonymousPush>true</AllowAnonymousPush>
-  <Repositories>D:\Projects\Bonobo Git Server\Other\Git Repositories</Repositories>
+  <Repositories>C:\git</Repositories>
   <AllowUserRepositoryCreation>true</AllowUserRepositoryCreation>
   <AllowAnonymousRegistration>true</AllowAnonymousRegistration>
+  <LDAPPath>LDAP://put.here.ldpa.path</LDAPPath>
 </Configuration>

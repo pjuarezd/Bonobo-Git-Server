@@ -28,6 +28,14 @@
               @Resources.Settings_Global_DirectoryHint
             </p> 
         </div> 
+        <div class="ctrlHolder">
+            @Html.LabelFor(m => m.LDAPPath)
+            @Html.TextBoxFor(m => m.LDAPPath, new { @class = "textInput" })<em>*</em>
+            <p class="formHint">
+              @Html.ValidationMessageFor(m => m.LDAPPath)
+              @Resources.Settings_LDAP_Path
+            </p>
+        </div>
         <div class="ctrlHolder noLabel"> 
             <label for="AllowAnonymousRegistration">@Html.CheckBoxFor(m => m.AllowAnonymousRegistration) @Model.GetType().GetDisplayValue("AllowAnonymousRegistration")</label>
             <p class="formHint">     
@@ -38,7 +46,7 @@
             <label for="AllowUserRepositoryCreation">@Html.CheckBoxFor(m => m.AllowUserRepositoryCreation) @Model.GetType().GetDisplayValue("AllowUserRepositoryCreation")</label>
             <p class="formHint">   
                 @Resources.Settings_Global_AllowAnonymousRegistration_Hint
-            </p> 
+            </p>
         </div> 
         <div class="buttonHolder"> 
             <button type="reset" class="secondaryAction">← @Resources.Reset</button> 

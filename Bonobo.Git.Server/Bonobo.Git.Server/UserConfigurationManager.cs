@@ -67,7 +67,6 @@ namespace Bonobo.Git.Server
             }
         }
 
-
         public static string Repositories
         {
             get
@@ -77,6 +76,18 @@ namespace Bonobo.Git.Server
             set
             {
                 Configuration.Repositories = value;
+            }
+        }
+
+        public static string LDAPPath
+        {
+            get
+            {
+                return Configuration.LDAPPath;
+            }
+            set
+            {
+                Configuration.LDAPPath = value;
             }
         }
 
