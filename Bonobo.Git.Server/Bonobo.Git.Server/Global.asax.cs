@@ -20,8 +20,8 @@ namespace Bonobo.Git.Server
 {
     public class MvcApplication : System.Web.HttpApplication
     {
-        public const string GitRepositoryPrefix = "Git.aspx/";
-        public const string AnonymousGitRepositoryPrefix = "Git.aspx/Anonymous/";
+        public const string GitRepositoryPrefix = "git/";
+        public const string AnonymousGitRepositoryPrefix = "git/Anonymous/";
 
         public static void RegisterRoutes(RouteCollection routes)
         {
